@@ -1,15 +1,25 @@
 {
   "name": "serv",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node index"
+    "start": "node index.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.18.1"
-  }
+    "express": "^4.18.1",
+    "mongoose": "^6.5.2"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PaltsevSerg/P_S_V.git"
+  },
+  "bugs": {
+    "url": "https://github.com/PaltsevSerg/P_S_V/issues"
+  },
+  "homepage": "https://github.com/PaltsevSerg/P_S_V#readme",
+  "description": ""
 }

@@ -1,12 +1,17 @@
 const express = require('express');
-const app = express();
+const mongoose = require('mongoose');
+const routes = require("./routes");
 
-const PORT = process.env.PORT || 80;
+mongoose
+    .connect('mongodb://localhost:27017/db', { useNewUrlParser: true })
+    .then(() => {
+        const app = express();
+        const PORT = process.env.PORT || 80;
 
-app.get('/', (req, res) => {
-    res.end('<h1>Home page my NodeJS</h1>');
-})
+        app.use(express.json());
+        app.use('', routes);
 
-app.listen(PORT, () => {
-    console.log('Server has been started...');
-})
+        app.listen(PORT, () => {
+            console.log('Server has been started...');
+        })
+    })
